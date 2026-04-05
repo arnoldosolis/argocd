@@ -84,12 +84,8 @@ kubectl get secret argocd-initial-admin-secret \
 * Be cautious enabling self-management without matching config
 ---
 
-## 🚀 Next Steps
+## 🧠 Helpful commands
 
-* Add Ingress (NGINX instead of NodePort)
-* Add your first app
-* Introduce App of Apps pattern
- 
 *If for some reason you need reach ui via port forward, feel free to do the following:*
 ```
 kubectl port-forward svc/argocd-server 8080:443 -n argocd --address 0.0.0.0
