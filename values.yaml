@@ -1,0 +1,15 @@
+server:
+  service:
+    type: NodePort
+  ingress:
+    enabled: true
+    # The host name to use for the Argo CD API server. This should be a fully qualified domain name (FQDN) that resolves to the IP address of the Argo CD API server. 
+    # If you are using a local development environment, you can use "argocd.local" as the host name. I set the A record in adguard to point to the IP address of the Argo CD API server.
+    # So, for example, to get to the UI, I visit the following URL: http://argocd.local:30080
+    hosts:
+      - argocd.local
+
+# Below is required to allow Argo CD to run in an insecure mode, which is necessary for local development environments where you may not have a valid TLS certificate.
+configs:
+  params:
+    server.insecure: true
